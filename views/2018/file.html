@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>fs核心模块 | 小布丁</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="秋天到了，夏天的不甘该通通放下了。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.2bfef05e.css" as="style"><link rel="preload" href="/assets/js/app.29a1d4f8.js" as="script"><link rel="preload" href="/assets/js/4.f6860c13.js" as="script"><link rel="preload" href="/assets/js/1.3f466ccf.js" as="script"><link rel="preload" href="/assets/js/42.84e291fc.js" as="script"><link rel="prefetch" href="/assets/js/10.5aa7c901.js"><link rel="prefetch" href="/assets/js/11.5975e1a1.js"><link rel="prefetch" href="/assets/js/12.82525f42.js"><link rel="prefetch" href="/assets/js/13.827b1e4b.js"><link rel="prefetch" href="/assets/js/14.198255ec.js"><link rel="prefetch" href="/assets/js/15.46afef1d.js"><link rel="prefetch" href="/assets/js/16.1328a146.js"><link rel="prefetch" href="/assets/js/17.df319d2f.js"><link rel="prefetch" href="/assets/js/18.de273aa6.js"><link rel="prefetch" href="/assets/js/19.4444ecf6.js"><link rel="prefetch" href="/assets/js/20.8e7dd617.js"><link rel="prefetch" href="/assets/js/21.f6507fd3.js"><link rel="prefetch" href="/assets/js/22.70dc8584.js"><link rel="prefetch" href="/assets/js/23.0c78be76.js"><link rel="prefetch" href="/assets/js/24.c22a4e2e.js"><link rel="prefetch" href="/assets/js/25.6c1e1328.js"><link rel="prefetch" href="/assets/js/26.f3d7a742.js"><link rel="prefetch" href="/assets/js/27.29a36f01.js"><link rel="prefetch" href="/assets/js/28.44515a64.js"><link rel="prefetch" href="/assets/js/29.c781765f.js"><link rel="prefetch" href="/assets/js/30.e6870249.js"><link rel="prefetch" href="/assets/js/31.f650ae93.js"><link rel="prefetch" href="/assets/js/32.6fe9cd46.js"><link rel="prefetch" href="/assets/js/33.8ee72fe9.js"><link rel="prefetch" href="/assets/js/34.0db6e01b.js"><link rel="prefetch" href="/assets/js/35.4a40492e.js"><link rel="prefetch" href="/assets/js/36.ee8b10f4.js"><link rel="prefetch" href="/assets/js/37.5f978432.js"><link rel="prefetch" href="/assets/js/38.2137e338.js"><link rel="prefetch" href="/assets/js/39.cc0d60ee.js"><link rel="prefetch" href="/assets/js/40.66f7251b.js"><link rel="prefetch" href="/assets/js/41.ed027d5a.js"><link rel="prefetch" href="/assets/js/43.3af67c8e.js"><link rel="prefetch" href="/assets/js/44.07a7058b.js"><link rel="prefetch" href="/assets/js/45.90169c67.js"><link rel="prefetch" href="/assets/js/46.d30a979b.js"><link rel="prefetch" href="/assets/js/47.b334f38f.js"><link rel="prefetch" href="/assets/js/48.05995eeb.js"><link rel="prefetch" href="/assets/js/49.8ac23909.js"><link rel="prefetch" href="/assets/js/5.c9384ee5.js"><link rel="prefetch" href="/assets/js/50.e41f005c.js"><link rel="prefetch" href="/assets/js/51.d96aac58.js"><link rel="prefetch" href="/assets/js/52.94ece6ad.js"><link rel="prefetch" href="/assets/js/53.9a9925ea.js"><link rel="prefetch" href="/assets/js/54.c18fd74d.js"><link rel="prefetch" href="/assets/js/55.0fa0f2b6.js"><link rel="prefetch" href="/assets/js/56.2d9ef6c3.js"><link rel="prefetch" href="/assets/js/6.47c705b8.js"><link rel="prefetch" href="/assets/js/7.deb4287f.js"><link rel="prefetch" href="/assets/js/8.d59bd49a.js"><link rel="prefetch" href="/assets/js/9.3895b529.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.8b91e508.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2bfef05e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>小布丁</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>小布丁</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.jpg" alt="小布丁" class="logo"> <span class="site-name">小布丁</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具配置/" class="nav-link"><i class="iconfont undefined"></i>
+  工具配置
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node/" class="nav-link"><i class="iconfont undefined"></i>
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Flutter/" class="nav-link"><i class="iconfont undefined"></i>
+  Flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Cli/" class="nav-link"><i class="iconfont undefined"></i>
+  Cli
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CDN/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/notes/" class="nav-link"><i class="iconfont reco-document"></i>
+  Notes
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  Timeline
+</a></div><div class="nav-item"><a href="https://github.com/zhaohongbo910" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><!----> <h3 class="name" data-v-b038cec6>
+    小布丁
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>27</h3> <h6 data-v-b038cec6>Article</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>27</h3> <h6 data-v-b038cec6>Tag</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具配置/" class="nav-link"><i class="iconfont undefined"></i>
+  工具配置
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node/" class="nav-link"><i class="iconfont undefined"></i>
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Flutter/" class="nav-link"><i class="iconfont undefined"></i>
+  Flutter
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Cli/" class="nav-link"><i class="iconfont undefined"></i>
+  Cli
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CDN/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/notes/" class="nav-link"><i class="iconfont reco-document"></i>
+  Notes
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  Timeline
+</a></div><div class="nav-item"><a href="https://github.com/zhaohongbo910" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>fs核心模块</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/2018/file.html#读取文件" class="sidebar-link">读取文件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/2018/file.html#写文件" class="sidebar-link">写文件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/2018/file.html#目录操作" class="sidebar-link">目录操作</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>小布丁</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>fs核心模块</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>小布丁</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="fs核心模块"><a href="#fs核心模块" class="header-anchor">#</a> fs核心模块</h1> <blockquote><p>Node.js的文件系统的Api,同步方法和异步方法同时出现</p></blockquote> <h2 id="读取文件"><a href="#读取文件" class="header-anchor">#</a> 读取文件</h2> <ul><li>异步读取 readFile</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+//异步读取文件内容(第二个参数不写默认读取的内容是buffer类型)
+fs.readFile('./file/data.txt', 'utf8', function (err, data) {
+    if (err){ //如果读取文件失败
+        console.log(err);
+    } else { //读取文件成功
+        console.log(data);
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>同步读取 readFileSync</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+//fs.readFileSync(filename, [options])
+//作用: 同步读取文件的操作
+//参数一是文件名, 参数而是编码格式: 如果是utf8则读取的内容是字符串, 不写默认是buffer
+var dataBuffer = fs.readFileSync('./file/data.txt');
+var dataStr = fs.readFileSync('./file/data.txt', 'utf8');
+
+//fs.readFileSync(filename, [options])
+console.log(dataBuffer);
+console.log(dataStr);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="写文件"><a href="#写文件" class="header-anchor">#</a> 写文件</h2> <ul><li>异步写入 writeFile</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+//fs.writeFile(filename, data, [options], callback)
+//异步向文件写入内容
+fs.writeFile('./file/data.txt', '大家好, 我叫陈超', 'utf8', function (err) {
+    if (!err){
+         fs.readFile('./file/data.txt', 'utf8', function (err, data) {
+             if (!err){
+                 console.log(data);
+             }
+         })
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><ul><li>同步写入 writeFileSync</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+//fs.writeFile(filename, data, [options], callback)
+//异步向文件写入内容
+fs.writeFile('./file/data.txt', '大家好, 我叫陈超', {flag: 'w', encoding:'utf8'}, function (err) {
+    if (!err){
+         fs.readFile('./file/data.txt', {flag: 'r', encoding:'utf8'}, function (err, data) {
+             if (!err){
+                 console.log(data);
+             }
+         })
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><ul><li>练习: 拷贝文件, 将data.txt文件中的内容拷贝出来写到info.txt文件中, 用同步和异步两种方式实现</li></ul> <blockquote><p>同步</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+var conFile = fs.readFileSync('../file/data.txt', 'utf8');
+
+fs.writeFileSync('../file/write.txt', conFile, 'utf8');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>同步</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+fs.readFile('../file/data.txt', 'utf8', function (err, confile) {
+    if (!err){
+         fs.writeFile('../file/write.txt', confile, 'utf8', function (err) {
+             if (!err){
+                 console.log('写入内容成功');
+             } else {
+                 console.log('写入内容失败');
+             }
+         })
+    } else {
+        console.log('读取内容失败');
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><blockquote><p>练习：appendFileSync和appendFile是将内容同步和异步的追加到文件的末尾，尝试将data.txt文件内容追加到info.txt末尾</p></blockquote> <ul><li>同步追加 appendFileSync</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+var data = fs.readFileSync('./file/data.txt', {encoding: 'utf8', flag: 'r'});
+console.log(data);
+
+//同步的方式将data内容追加到文件的末尾
+fs.appendFileSync('./file/info.txt', data, {encoding: 'utf8', flag: 'a'});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>异步追加 appendFile</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+fs.readFile('./file/data.txt', {encoding: 'utf8', flag: 'r'}, function (err, data) {
+    if (!err){
+        //异步的方式将data内容追加到文件的末尾
+        fs.appendFile('./file/info.txt', data, {encoding: 'utf8', flag: 'a'}, function (err) {
+            if (err){
+                console.log(err);
+            }
+        });
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li>关于读文件和写文件中的flag的说明:</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>flag	说明
+r	读取文件。如果文件不存在时抛出异常
+r+	读取并写入。如果文件不存在时抛出异常
+rs	以同步方式读取文件并通知操作系统忽略本地文件系统缓存。如果文件不存在时抛出异常
+w	写入文件。如果文件不存在时则创建该文件。如果文件已存在则清空文件内容
+w+	读取并写入文件。如果文件不存在时则创建该文件。如果文件已存在则清空文件内容
+wx	作用与”w”类似。但是以排他方式打开文件
+wx+	作用与”w+”类似。但是以排他方式打开文件
+a	以追加方式写入文件。如果文件不存在时则创建该文件
+a+	读取并以追加方式写入文件。如果文件不存在时则创建该文件
+ax	作用与”a”类似。但是以排他方式打开文件
+ax+	作用与”a+”类似。但是以排他方式打开文件
+
+注意: 切记 r w a三个
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><ul><li><p>练习: 追加文件,  将data.txt文件中的内容拷贝出来追加到info.txt文件中, 用同步和异步两种方式实现</p></li> <li><p>练习: 合并文件, 将数组中所有的文件读取出来,全部写入到一个新的文件中</p></li></ul> <h2 id="目录操作"><a href="#目录操作" class="header-anchor">#</a> 目录操作</h2> <ul><li>创建目录
+<ul><li>同步: fs.mkdirSync('a/b/c/d');</li> <li>异步: fs.mkdir('a/b/c/d');</li></ul></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+//同步创建文件夹, 要求父级目录必须存在否则创建失败
+fs.mkdirSync('./file/fileNew');
+
+//异步创建文件夹, 要求父级目录必须存在, 否则创建失败
+fs.mkdir('./file/fileNew/fileNewNew', function (err) {
+    if (err){
+        console.log(err);
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>判断一个文件是否存在
+<ul><li>同步: existsSync</li> <li>同步: exists</li></ul></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+//同步判断某个目录或者文件是否存在
+var exist = fs.existsSync('./file/fileNew');
+console.log(exist);
+
+//异步判断某个目录或者文件是否存在
+fs.exists('./file/fileNew', function(exist){
+    console.log(exist);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>读取目录下所有的文件
+fs.readdirSync();</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+//异步读取目录下所有的文件=&gt;只能读取一层
+var ary = fs.readdirSync('./file');
+
+//同步读取目录下所有的文件=&gt;只能读取一层
+fs.readdir('./file', function (err, ary) {
+    console.log(ary);
+});
+
+console.log(ary);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>查看文件目录信息
+fs.statSync('./e/'+item);</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var fs = require('fs');
+
+//同步获取文件的信息
+var fileInfo = fs.statSync('./file');
+
+//同步获取文件的信息
+fs.stat('./file/data.txt', function (err, infoFile) {
+    console.log(infoFile);
+    //通过isDirectory()能够判断当前路径下的文件是否是文件
+    console.log(infoFile.isFile());
+});
+
+//通过isDirectory()能够判断当前路径下的文件是否是目录
+console.log(fileInfo.isDirectory());
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><blockquote><p>编写一个方法，将某个目录下的所有文件内容读取出来(只要文件)，集体追加到另一个文件的末尾</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>function myReadFile(dirPath, filePath){
+    var fs = require('fs');
+    var path = require('path');
+
+    fs.readdir(dirPath, function (err, ary) {
+        if (!err){
+            ary.forEach(function (file, index) {
+                fs.stat(path.join(dirPath, file), function (err, fileInfo) { //切记获取文件信息的时候路径需要进行拼接(目录路径+文件名)
+                    if (!err){
+                        if (fileInfo.isFile()){ //如果是文件
+                            fs.readFile(path.join(dirPath, file), 'utf8', function (err, confile) {
+                                if (!err){
+                                    fs.appendFile(filePath, confile, 'utf8', function (err) {
+                                        if (err){
+                                            console.log('追加文件内容失败:'+path.join(dirPath, file));
+                                        }
+                                    })
+                                } else {
+                                    console.log('读取文件内容失败:'+path.join(dirPath, file));
+                                }
+                            })
+                        }
+                    } else {
+                        console.log('获取文件详细信息失败');
+                    }
+                });
+            })
+        } else {
+            console.log('读取目录信息失败');
+        }
+    });
+}
+
+myReadFile('../', 'info.txt');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">4/21/2020, 7:19:40 PM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.29a1d4f8.js" defer></script><script src="/assets/js/4.f6860c13.js" defer></script><script src="/assets/js/1.3f466ccf.js" defer></script><script src="/assets/js/42.84e291fc.js" defer></script>
+  </body>
+</html>
