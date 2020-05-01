@@ -1,6 +1,7 @@
 ---
 title: 跨域解决方案之proxyTable  
 date: 2017-12-30
+permalink: /:year/:month/:day/:slug
 tags:
  - vue
  - webpack

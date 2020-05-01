@@ -52,11 +52,11 @@ categories:
     test.bar();
 ```
 ::: tip
- CommonJS 加载模块是同步的，所以只有加载完成才能执行后面的操作。像Node.js主要用于服务器的编程，加载的模块文件一般都已经存在本地硬盘，所以加载起来比较快，不用考虑异步加载的方式，所以CommonJS规范比较适用。但如果是浏览器环境，要从服务器加载模块，这是就必须采用异步模式。所以就有了 AMD  CMD 解决方案。
+**CommonJS 加载模块是同步的，所以只有加载完成才能执行后面的操作**。像Node.js主要用于服务器的编程，加载的模块文件一般都已经存在本地硬盘，所以加载起来比较快，不用考虑异步加载的方式，所以CommonJS规范比较适用。但如果是浏览器环境，要从服务器加载模块，这是就必须采用异步模式。所以就有了 AMD  CMD 解决方案。
 ::: 
 ## AMD和RequireJS
 ::: tip
- AMD是"Asynchronous Module Definition"的缩写，意思就是"异步模块定义".
+ AMD是"Asynchronous Module Definition"的缩写，意思就是"**异步模块定义**".
  AMD设计出一个简洁的写模块API：
  define(id?, dependencies?, factory);
 :::
@@ -96,7 +96,7 @@ categories:
    // 包装模块
     define(function(require, exports, module) {
         var a = require('a'),
-              b = require('b');
+            b = require('b');
 
         exports.action = function() {};
     } );
@@ -189,7 +189,7 @@ categories:
  CMD是SeaJS 在推广过程中对模块定义的规范化产出
  对于依赖的模块AMD是提前执行，
  CMD是延迟执行。不过RequireJS从2.0开始，也改成可以延迟执行（根据写法不同，处理方式不通过）。
- CMD推崇依赖就近，AMD推崇依赖前置。
+**CMD推崇依赖就近，AMD推崇依赖前置。**
 :::
 
 ```js
@@ -224,22 +224,24 @@ categories:
 ## UMD
 ::: tip
  UMD是AMD和CommonJS的糅合
- AMD模块以浏览器第一的原则发展，异步加载模块。
- CommonJS模块以服务器第一原则发展，选择同步加载，它的模块无需包装(unwrapped modules)。
+ **AMD模块以浏览器第一的原则发展，异步加载模块。**
+ **CommonJS模块以服务器第一原则发展，选择同步加载，它的模块无需包装(unwrapped modules)。**
  这迫使人们又想出另一个更通用的模式UMD （Universal Module Definition）。希望解决跨平台的解决方案。
- UMD先判断是否支持Node.js的模块（exports）是否存在，存在则使用Node.js模块模式。
- 在判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块。
+**UMD先判断是否支持Node.js的模块（exports）是否存在，存在则使用Node.js模块模式。在判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块**
 ::: 
 ```js
-    (function (window, factory) {
+    (function (name, factory) {
+        // 判断 exports 是否存在 如果存在 则成为 CommonJS模块
         if (typeof exports === 'object') {
             module.exports = factory();
         } else if (typeof define === 'function' && define.amd) {
+            // 判断 ADM || CMD 模块
             define(factory);
         } else {
-            window.eventUtil = factory();
+            // window.eventUtil = factory();
+            this[name] = factory();
         }
-    })(this, function () {
+    })('myFun', function () {
         function Myfun(){}
         // module ...
         return MyFuns

@@ -1,11 +1,13 @@
-<!-- ---
+---
 title: servlet  
-date: 2017-01-03
+date: 2018-01-03
+permalink: /:year/:month/:day/:slug
 tags:
  - servlet 
 categories: 
  - Java
---- -->
+publish: false
+---
 
 ## servlet 服务器端程序
 

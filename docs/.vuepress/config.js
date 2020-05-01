@@ -15,6 +15,7 @@ module.exports = {
     }]
   ],
   theme: 'reco',
+  // theme: '@vuepress/vue',
   themeConfig,
   markdown: {
     lineNumbers: true,

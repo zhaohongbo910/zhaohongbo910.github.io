@@ -1,12 +1,13 @@
 ---
 title: JavaScript基础知识梳理  
 date: 2017-05-01
+permalink: /:year/:month/:day/:slug
 tags:
  - 面试 
  - JavaScript
 categories: 
- - JavaScript
-autoGroup: javaScript
+ - 前端
+# autoGroup: javaScript
 ---
 
 ## 1、javascript的typeof返回哪些数据类型
@@ -33,7 +34,6 @@ autoGroup: javaScript
     var arr=[];
     arr.constructor;//Array
 ```
-
 
 ## 2、例举3种强制类型转换和2种隐式类型转换?
 
@@ -152,7 +152,7 @@ fn2.apply(p1,["张三",20]);
 ## [9、js中的继承]('./')
 
 ## 10、闭包是什么，有什么特性，对页面有什么影响
-闭包就是能够读取其他函数内部变量的函数。
+闭包就是能够读取其他函数内部变量的函数。-- 实现外部作用域访问内部作用域中变量的方法叫做闭包（closure）
 闭包的缺点：
 + 1 更多的内存消耗
 + 2 性能问题（跨作用域访问）
@@ -243,7 +243,6 @@ num="jim";//此时num又变成一个字符串类型
 + 4、调用函数，参数未传
 扩展：not defined语法错误
 
-
 ## 20、怎样添加、移除、移动、复制、创建和查找节点（使用原生JS实现）
 1）创建新节点
     createDocumentFragment() //创建一个DOM文档片段
@@ -304,13 +303,12 @@ var str=” hello “;
 
 ## 25 JavaScript中遇到“null instanceof Object ”返回值为false的解释
 ::: tip
-1、null表示为空的引用；instanceof 表示某个变量是否是某个对象的实例 ；object则是对象界里的老大，undefined和null比较特殊，虽然null的类型是object，但是null不具有任何对象的特性，就是说我们并不能执行null.toString()、null.constructor等对象实例的默认调用。所以从这个意义上来说，null和undefined有最大的相似性。看看null == undefined的结果(true)也就更加能说明这点。
+1、`null`表示为空的引用；`instanceof` 表示某个变量是否是某个对象的实例 ；`objec`t则是对象界里的老大，`undefined`和`null`比较特殊，虽然`null`的类型是`object`，但是null不具有任何对象的特性，就是说我们并不能执行 `null.toString()`、`null.constructor`等对象实例的默认调用。所以从这个意义上来说，`null`和`undefined`有最大的相似性。看看 `null == undefined `的结果(true)也就更加能说明这点。
 
-
-不过相似归相似，还是有区别的，就是和数字运算时，10 + null结果为：10；10 + undefined结果为：NaN（非数字值）。故null instanceof Object判读为false。
+不过相似归相似，还是有区别的，就是和数字运算时，10 + null结果为：10；10 + undefined结果为：NaN（非数字值）。故 null instanceof Object 判读为false。
 pg：isNaN() 函数用于检查其参数是否是非数字值，参数值为 NaN 或字符串、对象、undefined等非数字值则返回 true, 否则返回 false。
 2、typeof 返回一个表达式的数据类型的字符串，返回结果为javascript中的基本数据类型，包括：number、boolean、string、object、undefined、function等6种数据类型。
-null肯定不是undefined，当然是object。
+typeof null object
 ::: 
 
 ## 26、把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
@@ -357,6 +355,18 @@ Cookie是有数量和长度限制的。每个domain最多只能有20条cookie，
 + 3.有些状态不可能保存在客户端。例如，
 一、为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。
 二、比如用户密码输入错误超过3次，我们应该在后端数据库中保存错误数据
+
+###  cookie、localStorage 以及 sessionStorage
+
+|特性	       |        cookie                 |	localStorage	       | sessionStorage |	indexDB|
+|-----------|-------------------------------|-----------------------|----------------|--------|
+|数据生命周期 |	一般由服务器生成，可以设置过期时间, |	除非被清理，否则一直存在  |	页面关闭就清理    |	除非被清理，否则一直存在|
+|数据存储大小 |	4K                            |	5M                    |	5M              |	无限|
+|与服务端通信 |	每次都会携带在 header 中，对于请求性能影响 |	不参与         |	不参与          |	不参与|
+| 作用       | 主要用来保存登陆信息，一般会存储一段表示用户信息的数据。| 用于永久存储信息| 存储临时性信息 | 永久性信息 |
+
+
+
 
 ## 29 、哪些操作会造成内存泄漏？
 内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。

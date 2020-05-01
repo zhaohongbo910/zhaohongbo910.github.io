@@ -1,10 +1,15 @@
 module.exports = [{
-    text: '首页',
+    text: 'Home',
     link: '/',
     icon: 'reco-home'
   },
+  // {
+  //   text: 'Notes',
+  //   link: '/plugin/',
+  //   icon: 'reco-document'
+  // },
   {
-    text: '时间线',
+    text: 'Timeline',
     link: '/timeline/',
     icon: 'reco-date'
   },
