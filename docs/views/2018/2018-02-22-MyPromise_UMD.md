@@ -1,6 +1,6 @@
 ---
 title: MyPromise_UMD版本
-date: 2018-01-06
+date: 2018-02-22
 tags:
  - UMD 
 categories: 
