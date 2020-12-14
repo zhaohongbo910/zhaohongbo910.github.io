@@ -1,9 +1,11 @@
 ---
 title: api
 date: 2020-05-29
-sidebar: false
 ---
 
 This is api.
 
-<<< @../../views/2017/2017-01-01-css面试题.md
+<<< @/docs/views/2017/2017-01-01-css面试题.md
+
+
+mkcert yade.com "*.yade.com" localhost 127.0.0.1 ::1

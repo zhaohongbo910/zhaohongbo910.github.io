@@ -1,4 +1,7 @@
 const themeConfig = require('./config/themeReco')
+const importCodePlugins = require('./plugins/index');
+
+const fs = require('fs');
 
 module.exports = {
     title: "小布丁",
@@ -19,6 +22,9 @@ module.exports = {
     markdown: {
         lineNumbers: true,
         extendMarkdown: md => {
+            fs.writeFileSync('./md.json', JSON.stringify(md))
+                // console.log("md", md)
+
             // 使用更多的 markdown-it 插件!
             // md.use(require('markdown-it-xxx'))
         }
@@ -26,6 +32,7 @@ module.exports = {
     plugins: [
         '@vuepress/medium-zoom',
         'flowchart',
+        '@vuepress-reco/extract-code',
     ]
 
 }
