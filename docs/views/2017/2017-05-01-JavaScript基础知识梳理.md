@@ -10,7 +10,7 @@ categories:
 # autoGroup: javaScript
 ---
 
-## 1、javascript的typeof返回哪些数据类型
+## javascript的typeof返回哪些数据类型
 + 考点：使用typeof检测数据类型
 
     | 类型 | 值|
@@ -34,8 +34,11 @@ categories:
     var arr=[];
     arr.constructor;//Array
 ```
+## JavaScript的数据类型都有什么？
+基本数据类型：number、string、boolean、undefined、null,
+复杂数据类型：Object(Array,Date,RegExp,Function)
 
-## 2、例举3种强制类型转换和2种隐式类型转换?
+## 例举3种强制类型转换和2种隐式类型转换?
 
 + 强制类型转换：自己通过函数来进行数据类型转换
     + 举例：（**parseInt,parseFloat,Number()**）
@@ -46,12 +49,8 @@ categories:
     1==’1’
     null==undefined
 
-## 3、split() join() 的区别
-+ split()将字符串按照指定的字符分割成一个数组，并返回
-+ join()将数组用指定的字符连接成一个字符串，并返回
-
-## 4、数组方法pop() push() unshift() shift()
-[Js 数组方法]('./2017-05-05-数组的方法.md'),
+## 数组方法pop() push() unshift() shift()
+<a href="/2017/05/05/数组的方法"> [Js 数组方法]</a>
 + 栈方法：
     + push()尾部添加，返回 数组长度
     + pop()尾部删除，返回 被删除的元素
@@ -59,7 +58,7 @@ categories:
     + unshift()头部添加 ，返回 数组长度
     + shift()头部删除，返回被删除的元素
 
-## 5、事件绑定和普通事件 有什么区别
+## 事件绑定和普通事件 有什么区别
 + 事件：事件是由浏览器动作（如浏览器载入文档onload）和用户动作（如点击onclick）触发所产生得人机交互瞬间。  
 + 普通事件：**给html元素添加一个特定的属性（比如：onclick）**
 + 事件绑定：js代码中通过标记(id tag class)获取元素，给元素添加特定的方法(比如onclick)
@@ -109,7 +108,7 @@ categories:
     + 2、这种方式只支持事件冒泡，不支持事件捕获
     + 事件绑定是指把事件注册到具体的元素之上，普通事件指的是可以用来注册的事件
 
-## 6、IE和DOM事件流的区别
+## IE和DOM事件流的区别
 + IE9以前：attachEvent(“onclick”)、detachEvent(“onclick”)
 + IE9开始跟DOM事件流是一样的，都是addEventListener
 
@@ -118,14 +117,16 @@ categories:
 + 2、参数：attachEvent事件类型需要on前缀 addEventListener事件类型不需要on前缀
 + 3、如果使用attachEvent对一个元素的目标阶段绑定了多次事件，那么会按照绑定顺序的相反顺序进行触发，如果使用addEventListener对一个元素的目标阶段绑定了多次事件，那么会按照绑定顺序进行触发
 
-## 7、IE和标准下有哪些兼容性的写法
+## IE和标准下有哪些兼容性的写法
 + a、获取事件对象：var ev = ev || window.event 或者  var ev=ev?ev:window.evnet;
 + srcElement：IE9之前的浏览器用来获取事件目标元素
 + target：IE9+、ff、chrome用来获取事件的目标元素
 + b、获取事件目标元素：var target = ev.srcElement||ev.target
 
-## 8、call和apply的区别
-考点：call和apply的用法
+## call和apply的区别
+考点：call和apply的用法 
+<a href='/2017/03/15/改变this指向的方法'>改变this指向 </a>
+
 **call和apply相同点：改变函数中this的指向**
 不同点：函数参数的传递形式
 **call将函数参数依次传入**
@@ -149,9 +150,9 @@ var p1={};
 fn2.call(p1,"张三",20);
 fn2.apply(p1,["张三",20]);
 ```
-## [9、js中的继承]('./')
+## <a href="2017/06/24/JavaScriptd的继承"> [Js中的继承] </a>
 
-## 10、闭包是什么，有什么特性，对页面有什么影响
+## 闭包是什么，有什么特性，对页面有什么影响
 闭包就是能够读取其他函数内部变量的函数。-- 实现外部作用域访问内部作用域中变量的方法叫做闭包（closure）
 闭包的缺点：
 + 1 更多的内存消耗
@@ -166,10 +167,10 @@ fn2.apply(p1,["张三",20]);
 + d. 用闭包模拟私有方法
 **由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题**
 
-## 11、如何阻止事件冒泡和默认事件
+## 如何阻止事件冒泡和默认事件
 **阻止事件冒泡：**
-+ IE9+ FF Chrome：e. stopPropagation();
-+ window.event.cancelBubble=true;//ie9之前
++ IE9+ FF `Chrome：e. stopPropagation()`;
++ `window.event.cancelBubble=true` ;//ie9之前
 
 **默认行为：html标签所具有的默认行为，比如：**
 + a、点击a标签，就会默认跳转到指定的页面
@@ -180,21 +181,21 @@ fn2.apply(p1,["张三",20]);
 + 3、文本框获得焦点
 
 **阻止默认行为：**
-+ IE9之前：window.event.returnValue=false;
-+ IE9+ FF Chrome： e.preventDefault();
++ IE9之前：`window.event.returnValue=false`;
++ IE9+ FF `Chrome： e.preventDefault()`;
 
-## 12、javascript的本地对象，内置对象和宿主对象
+## javascript的本地对象，内置对象和宿主对象
 + 本地对象为Array RegExp等可以new实例化
 + 内置对象为global Math 等不可以实例化的
-+ 宿主为浏览器自带的document,window 等
++ 宿主为浏览器自带的document,window等
 
-## 13、document load 和document ready的区别
+## document load 和document ready的区别
 + **document.onload 是在结构和样式加载完才执行js**
 + document.ready原生中没有这个方法，jquery中有 $().ready(function)
 + DOMCententLoaded事件：页面的文档结构（DOM树）加载完之后就会触发
 + window.onload：不仅仅要在结构和样式加载完，还要执行完所有的外部样式、图片这些资源文件，全部加载完才会触发window.onload事件
 
-## 14、”==”和“===”的不同
+## ”==”和“===”的不同
 ==：会自动转换类型
 ===：先判断左右两边的数据类型，如果数据类型不一致，直接返回false
 之后才会进行两边值的判断
@@ -202,7 +203,7 @@ fn2.apply(p1,["张三",20]);
     1==”1”
     null==undefined;//==true
 ```
-## 15、javascript的同源策略
+## javascript的同源策略
 ::: tip
 一段脚本只能读取来自于同一来源的窗口和文档的属性，这里的同一来源指的是主机名、协议和端口号的组合
 主机名：localhost、www.baidu.com
@@ -212,9 +213,9 @@ https协议的默认端口是443
 同源策略带来的麻烦：ajax在不同域名下的请求无法实现，
 如果说想要请求其他来源的js文件，或者json数据，那么可以通过jsonp来解决
 ::: 
-## 16、[数组去重的方法]('./2017-10-09-数组去重.md')
+## [数组去重的方法]('./2017-10-09-数组去重.md')
 
-## 17、JavaScript是一门什么样的语言，它有哪些特点？
+## JavaScript是一门什么样的语言，它有哪些特点？
 弱类型、脚本语言、面向对象、
 运行环境：JS引擎（v8(Chrome)/SpiderMonkey(FireFox)/JavaScriptCore(Safari)
 /Chakra(IE)）
@@ -232,18 +233,14 @@ num="jim";//此时num又变成一个字符串类型
 //静态语言在声明一个变量就已经确定了这个变量的数据类型，
 //  而且在任何时候都不可以改变他的数据类型
 ```
-## 18、JavaScript的数据类型都有什么？
-基本数据类型：number、string、boolean、undefined、null,
-复杂数据类型：Object(Array,Date,RegExp,Function)
-
-## 19、undefined产生情况：
+## undefined产生情况：
 + 1、一个变量定义了却没有被赋值
 + 2、想要获取一个对象上不存在的属性或者方法:
 + 3、一个数组中没有被赋值的元素
 + 4、调用函数，参数未传
 扩展：not defined语法错误
 
-## 20、怎样添加、移除、移动、复制、创建和查找节点（使用原生JS实现）
+## 怎样添加、移除、移动、复制、创建和查找节点（使用原生JS实现）
 1）创建新节点
     createDocumentFragment() //创建一个DOM文档片段
     createElement() //创建一个具体的元素
@@ -259,7 +256,7 @@ num="jim";//此时num又变成一个字符串类型
     getElementsByTagName() // 通过类名查找
     getElementById() //通过元素Id，唯一性
 
-## 21、获取url 参数
+## 获取url 参数
 答案：
 ```js
 function serlize(url){
@@ -277,15 +274,34 @@ function serlize(url){
     return result;
 }
 serlize('http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e');
+
+
+// 
+let u = new URL('http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e');
+URL {origin: "http://item.taobao.com", protocol: "http:", username: "", password: "", host: "item.taobao.com",
+    hash: ""
+    host: "item.taobao.com"
+    hostname: "item.taobao.com"
+    href: "http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e"
+    origin: "http://item.taobao.com"
+    password: ""
+    pathname: "/item.htm"
+    port: ""
+    protocol: "http:"
+    search: "?a=1&b=2&c=&d=xxx&e"
+    searchParams: URLSearchParams {}
+    username: ""
+}
+u.searchParams //  是一个map 结构
 ```
 
-## 22、正则表达式构造函数var reg=new RegExp(“xxx”)与正则表达字面量var reg=//有什么不同？匹配邮箱的正则表达式？
+## 正则表达式构造函数var reg=new RegExp(“xxx”)与正则表达字面量var reg=//有什么不同？匹配邮箱的正则表达式？
 RegExp
 答案：**当使用RegExp()构造函数的时候，不仅需要转义引号（即\”表示”）**，并且还需要双反斜杠（即\表示一个\）。使用正则表达字面量的效率更高。
 邮箱的正则匹配：
 var regMail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/;
 
-## 23、写一个function，清除字符串前后的空格。（兼容所有浏览器）
+## 写一个function，清除字符串前后的空格。（兼容所有浏览器）
 使用自带接口trim()，考虑兼容性(IE9以下浏览器不支持)：
 考点：1、原型扩展 2、正则表达式 3、字符串的replace方法
 ```js
@@ -296,12 +312,12 @@ if(typeof String.prototype.trim !=”function”){
 }
 var str=” hello “;
 ```
-## 24、Javascript中callee和caller的作用？
+## Javascript中callee和caller的作用？
 + arguments.callee：获得当前函数的引用
 + fn.caller是返回一个对函数的引用，该函数调用了当前函数；（被废弃）
 + callee是返回正在被执行的function函数，也就是所指定的function对象的正文。
 
-## 25 JavaScript中遇到“null instanceof Object ”返回值为false的解释
+## JavaScript中遇到“null instanceof Object ”返回值为false的解释
 ::: tip
 1、`null`表示为空的引用；`instanceof` 表示某个变量是否是某个对象的实例 ；`objec`t则是对象界里的老大，`undefined`和`null`比较特殊，虽然`null`的类型是`object`，但是null不具有任何对象的特性，就是说我们并不能执行 `null.toString()`、`null.constructor`等对象实例的默认调用。所以从这个意义上来说，`null`和`undefined`有最大的相似性。看看 `null == undefined `的结果(true)也就更加能说明这点。
 
@@ -311,20 +327,10 @@ pg：isNaN() 函数用于检查其参数是否是非数字值，参数值为 NaN
 typeof null object
 ::: 
 
-## 26、把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
+## 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
 如果说放在body的封闭之前，将会阻塞其他资源的加载
 如果放在body封闭之后，不会影响body内元素的加载
 
-## 27、iframe的优缺点？
-优点：
-+ 
-+ 1、解决加载缓慢的第三方内容如图标和广告等的加载问题
-+ 2、并行加载脚本
-缺点：
-+ 1、iframe会阻塞主页面的onload事件
-+ 2、即时内容为空，加载也需要时间，因为需要http请求
- + 3、不便于SEO
-+ 4、内外网页维护麻烦
 
 ## 28、请你谈谈Cookie的弊端？
 什么是Cookie？Cookie是指某些网站为了辨别用户身份或进行session跟踪而储存在用户本地浏览器终端上的数据。一般来说，Cookie通过HTTP Headers从服务器端返回到浏览器上。首先，服务器端在响应中利用Set-Cookie header来创建一个Cookie ，然后，浏览器在它的请求中通过Cookie header包含这个已经创建的Cookie，并且把它返回至服务器，从而完成浏览器的验证。

@@ -1,10 +1,14 @@
+---
+title: 流模块
+date: 2018-05-29
+---
 ## 流的概念
 > 流是一组有序的，有起点和终点的字节数据传输手段 它不关心文件的整体内容，只关注是否从文件中读到了数据，以及读到数据之后的处理 流是一个抽象接口，被 Node 中的很多对象所实现。比如HTTP 服务器request和response对象都是流。
 
 ## 1.可读流createReadStream
 > 实现了stream.Readable接口的对象,将对象数据读取为流数据,当监听data事件后,开始发射数据
 
-```
+```js
 fs.createReadStream = function(path, options) {
   return new ReadStream(path, options);
 };
@@ -25,20 +29,20 @@ var rs = fs.createReadStream(path,[options]);
 
 ### 1.1.1 监听data事件
 > 流切换到流动模式,数据会被尽可能快的读出
-```
+```js
 rs.on('data', function (data) {
     console.log(data);
 });
 ```
 ### 1.1.2 监听end事件
 > 该事件会在读完数据后被触发
-```
+```js
 rs.on('end', function () {
     console.log('读取完成');
 });
 ```
 ### 1.1.3 监听error事件
-```
+```js
 rs.on('error', function (err) {
     console.log(err);
 });
@@ -46,12 +50,12 @@ rs.on('error', function (err) {
 ### 1.1.4 设置编码
 > 与指定{encoding:'utf8'}效果相同，设置编码
 
-```
+```js
 rs.setEncoding('utf8');
 
 ```
 > 实例
-```
+```js
 
 var fs = require('fs');
 
@@ -75,7 +79,7 @@ rs.on('error', function (err) {
 
 ### 1.1.5暂停触发data恢复触发data
 > 通过pause()方法和resume()方法
-```
+```js
   rs.on('data', function (data) {
       rs.pause();
       console.log(data);
@@ -86,7 +90,7 @@ rs.on('error', function (err) {
 ```
 
 > 例子:
-```
+```js
   var fs = require('fs');
 
   var readStream = fs.createReadStream('../data.txt', {encoding:'utf8', highWaterMark: 3, start: 0, end: 11});
@@ -124,7 +128,7 @@ rs.on('error', function (err) {
 
 ## 2.可写流createWriteStream
 > 实现了stream.Writable接口的对象来将流数据写入到对象中
-```
+```js
 fs.createWriteStream = function(path, options) {
   return new WriteStream(path, options);
 };
@@ -132,7 +136,7 @@ util.inherits(WriteStream, Writable);
 ```
 
 ### 2.1 创建可写流
-```
+```js
 var ws = fs.createWriteStream(path,[options]);
 ```
 - 1: path写入的文件路径
@@ -142,7 +146,7 @@ var ws = fs.createWriteStream(path,[options]);
     - highWaterMark写入缓存区的默认大小16kb
 
 ### 2.1.1 write方法
-```
+```js
 ws.write(chunk,[encoding],[callback]);
 ```
 - chunk写入的数据buffer/string
@@ -157,7 +161,7 @@ ws.end(chunk,[encoding],[callback]);
 - 调用该方法关闭文件, 迫使系统缓存区的数据立即写入文件中。不能再次写入
 
 > 实例代码
-```
+```js
 var fs = require('fs');
 
 //创建可写流 //flags设置为a就是追加内容
@@ -173,7 +177,7 @@ writeStream.end('大家好');
 ## 修改flags的值为'a'向文件末尾追加数据
 
 ### 2.1.3 drain方法
-```
+```js
 var fs = require('fs');
 var ws = fs.createWriteStream('./2.txt',{highWaterMark:5});
 var i = 0;
@@ -190,7 +194,7 @@ ws.on('drain', function () { //当缓冲区的内容为空的时候触发
 ```
 ### 3.pipe方法
 ### 3.1 pipe方法的原理
-```
+```js
 function myPipe(path1, path2){
     var fs = require('fs');
     var rs = fs.createReadStream(path1, {highWaterMark: 5});
@@ -215,7 +219,7 @@ myPipe('input.txt', 'output.txt');
 ```
 ### 3.2 pipe用法
 > 格式: readStream.pipe(writeStream);
-```
+```js
 var fs = require('fs');
 var rs = fs.createReadStream('input.txt', {highWaterMark: 5});
 var ws = fs.createWriteStream('output.txt', {highWaterMark: 1});

@@ -9,9 +9,13 @@ categories:
 publish: true
 ---
 
-> buffer的来龙去脉
+
+> buffer的来龙去脉 
+
+<!--more-->
 
 ## 1. 什么是字节
+
 + 一个字节：11111111 （八位二进制数）
 + 10进制：0～9 
 + 2进制：0～1
@@ -48,7 +52,7 @@ publish: true
 
 ## 2. 什么是Buffer
 - **缓冲区Buffer是暂时存放输入输出数据的一段内存**
-- JS语言没有二进制数据类型，而在处理TCP和文件流的时候，必须要处理二进制数据。
+- JS语言没有二进制数据类型，而在处理TCP和文件流的时候，必须要处理二进制数据。Buffer是一个像Array的对，它要用用于操作字节。
 - NodeJS提供了一个Buffer对象来提供对二进制数据的操作, 是一个表示固定内存分配的全局对象，也就是说要放到缓存区中的字节数需要提前确定
 - Buffer好比由一个多位字节元素组成的数组，可以有效的在javascript中表示二进制数据
 - **Buffer对象类似于数组，它的元素为16进制的两位数，即0到255的数值**
@@ -58,7 +62,6 @@ publish: true
 Buffer是一个的JavaScript与C++的结合的模块，它性能相关部分用C++实，非性能相关的部分用JavaScript实现，Buffer所占用的内存不是通过V8分配，它属于**堆外内存**
 由于V8收垃圾回收机制的影响，将常用的操作对象用用更高效和专有的内存分配回收策略来管理是个不错的思路。并且由于buffer太常见，Node在进程启动的时候 就已经加载了，并放置在全局对象`global`所以无需`require()`可直接使用。
 
-
 ### 2.2 [Buffer 对象](http://nodejs.cn/api/buffer.html#buffer_class_method_buffer_alloc_size_fill_encoding)
 
 ```js
@@ -67,14 +70,9 @@ console.log("buffer", buffer)
 // buffer <Buffer e5 b0 8f e5 b8 83 e4 b8 81>
 
 let buf = Buffer.alloc(100) // 分配一个长度为 100字节 的Buffer 对象
+
 ```
-在Node的早期版本中 创建buffer 都是用 `new Buffer(size)` 的方式来创建 现在这种方式已经被弃用了
-
-
-
-
-
-
+在Node的早期版本中 创建buffer 都是用 `new Buffer(size)` 的方式来创建 现在这种方式已经被弃用了。不同的编码用的个数不相同，上中的中在 UTF-8编下用3个，用1个。 
 
 
 - 5.进制转换

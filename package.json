@@ -1,26 +1,26 @@
 {
-  "name": "zhaohongbo",
-  "version": "1.0.0",
-  "description": "zhonghongbo",
-  "main": "index.js",
-  "repository": "http://zhonghongbo910.gitlab.io",
-  "author": "zhonghongbo",
-  "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx vuepress dev docs",
-    "build": "npx vuepress build docs"
-  },
-  "dependencies": {
-    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
-    "@vuepress/plugin-medium-zoom": "1.4.1",
-    "@vuepress/plugin-pwa": "1.4.1",
-    "vuepress": "^1.5.3",
-    "vuepress-plugin-container": "^2.1.1",
-    "vuepress-plugin-flowchart": "1.4.3",
-    "vuepress-theme-reco": "^1.5.5"
-  },
-  "devDependencies": {
-    "vuepress-plugin-comment": "^0.7.2"
-  }
+    "name": "zhaohongbo",
+    "version": "1.0.0",
+    "description": "zhonghongbo",
+    "main": "index.js",
+    "repository": "http://zhonghongbo910.gitlab.io",
+    "author": "zhonghongbo",
+    "license": "MIT",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npx vuepress dev docs",
+        "build": "npx vuepress build docs"
+    },
+    "dependencies": {
+        "@vuepress/plugin-blog": "^1.9.2",
+        "@vuepress/plugin-medium-zoom": "1.4.1",
+        "@vuepress/plugin-pwa": "1.4.1",
+        "vuepress": "^1.5.3",
+        "vuepress-plugin-container": "^2.1.1",
+        "vuepress-plugin-flowchart": "1.4.3",
+        "vuepress-theme-reco": "1.5.4"
+    },
+    "devDependencies": {
+        "vuepress-plugin-comment": "^0.7.2"
+    }
 }

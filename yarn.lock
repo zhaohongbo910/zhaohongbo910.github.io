@@ -1219,7 +1219,7 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vuepress-reco/vuepress-plugin-back-to-top@^1.5.5":
+"@vuepress-reco/vuepress-plugin-back-to-top@^1.5.4":
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-back-to-top/-/vuepress-plugin-back-to-top-1.5.5.tgz#779e1f3ca22babe3568123760f53b0dc93869602"
   integrity sha512-NT1kHMGcHf9i8fGjbcb1dD58EDzA9oz0aNCw0pOCuZpIFJstGHIGG8eUEHA0OdJiL/VxtspMUuYu2V124q0ijw==
@@ -1236,11 +1236,6 @@
     "@vssue/api-gitlab-v4" "^1.1.1"
     valine "^1.4.14"
     vssue "^1.4.6"
-
-"@vuepress-reco/vuepress-plugin-extract-code@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-extract-code/-/vuepress-plugin-extract-code-1.0.4.tgz#c50b521d8a5d1c9dfd705e245a7e920a80315a32"
-  integrity sha512-J4Cas3JRxs0TnfjtzQ+3bl7iNwL/va9cOXMtpayse3sETul863BwYk1vEBXRAZMiLmbmWqnBrGIrJGmD/TnO5Q==
 
 "@vuepress-reco/vuepress-plugin-loading-page@^1.4.0":
   version "1.4.0"
@@ -1325,7 +1320,7 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-blog@1.9.2":
+"@vuepress/plugin-blog@1.9.2", "@vuepress/plugin-blog@^1.9.2":
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.9.2.tgz#d463a218bf54b51a07b87eb703dc1cc9eddeef3c"
   integrity sha512-1y4C7miuJyhP2YV9+8SGPzcwbyNqQWB1WQQf1AYdWvlAK/QrFdTXOtFyBKoViJppHxIkLLz+45bvOm5sIqjv6w==
@@ -10233,12 +10228,12 @@ vuepress-plugin-smooth-scroll@^0.0.9:
   dependencies:
     smoothscroll-polyfill "^0.4.4"
 
-vuepress-theme-reco@^1.5.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-reco/-/vuepress-theme-reco-1.5.5.tgz#8ea5293991d0321e5f1e5e4dbbb6d94f4c8a7cc0"
-  integrity sha512-G/SfQIb9Z/ZoyQ9leeieZfbQ/qJE/uXlRTSo5KKdZ8MPVL2DM65LQy436BQyQRO0C4yr912MjYADLpFPK/mQ8g==
+vuepress-theme-reco@1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-reco/-/vuepress-theme-reco-1.5.4.tgz#eea83bbb26320e053b0f33d04d4274fbb1155d97"
+  integrity sha512-zvuGslzxlLj9r2h1In8DSIgTjL34AtBqn/1Whke+FTzQX1KsstasGfyLLUTMxDBBCQ8uK+UnioX2nxXtXbZqUA==
   dependencies:
-    "@vuepress-reco/vuepress-plugin-back-to-top" "^1.5.5"
+    "@vuepress-reco/vuepress-plugin-back-to-top" "^1.5.4"
     "@vuepress-reco/vuepress-plugin-comments" "^1.4.6"
     "@vuepress-reco/vuepress-plugin-loading-page" "^1.4.0"
     "@vuepress-reco/vuepress-plugin-pagation" "^1.4.7"

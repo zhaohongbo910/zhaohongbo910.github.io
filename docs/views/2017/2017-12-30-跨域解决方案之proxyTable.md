@@ -7,7 +7,6 @@ tags:
  - webpack
 categories: 
  - 前端
-sidebar: false
 ---
 
 > 在开发阶段，前端调用后端接口可能会出现跨域问题，在vue-cli中已经为我们集成了[**http-proxy-middleware**](https://github.com/chimurai/http-proxy-middleware)，我们只需要在`config/index.js`中的proxyTable 配置即可。
@@ -16,7 +15,7 @@ sidebar: false
 
 如果接口是`www.baidu.com/get/getList`，那么有两种配置方案：
 - 方法一
-```ecmascript 6
+```js
 proxyTable: {
   '/api': {
     target: 'www.baidu.com', 目标api 
@@ -29,7 +28,7 @@ proxyTable: {
 ```
 这个时候我们请求`/api/getList`就是请求`www.baidu.com/get/getList`
 - 方法二
-```ecmascript 6
+```js
 proxyTable: {
   '/api': {
     target: 'www.baidu.com',

@@ -1,11 +1,14 @@
-
+---
+title: 文件操作模块
+date: 2018-05-29
+---
 
 # fs核心模块
 > Node.js的文件系统的Api,同步方法和异步方法同时出现
 
 ## 读取文件
 - 异步读取 readFile
-```
+```js
 var fs = require('fs');
 
 //异步读取文件内容(第二个参数不写默认读取的内容是buffer类型)
@@ -18,7 +21,7 @@ fs.readFile('./file/data.txt', 'utf8', function (err, data) {
 });
 ```
 - 同步读取 readFileSync
-```
+```js
 var fs = require('fs');
 //fs.readFileSync(filename, [options])
 //作用: 同步读取文件的操作
@@ -33,7 +36,7 @@ console.log(dataStr);
 
 ## 写文件
 - 异步写入 writeFile
-```
+```js
 var fs = require('fs');
 
 //fs.writeFile(filename, data, [options], callback)
@@ -50,7 +53,7 @@ fs.writeFile('./file/data.txt', '大家好, 我叫陈超', 'utf8', function (err
 ```
 
 - 同步写入 writeFileSync
-```
+```js
 var fs = require('fs');
 
 //fs.writeFile(filename, data, [options], callback)
@@ -68,7 +71,7 @@ fs.writeFile('./file/data.txt', '大家好, 我叫陈超', {flag: 'w', encoding:
 
 - 练习: 拷贝文件, 将data.txt文件中的内容拷贝出来写到info.txt文件中, 用同步和异步两种方式实现
 > 同步
-```
+```js
 var fs = require('fs');
 
 var conFile = fs.readFileSync('../file/data.txt', 'utf8');
@@ -76,7 +79,7 @@ var conFile = fs.readFileSync('../file/data.txt', 'utf8');
 fs.writeFileSync('../file/write.txt', conFile, 'utf8');
 ```
 > 同步
-```
+```js
 var fs = require('fs');
 
 fs.readFile('../file/data.txt', 'utf8', function (err, confile) {
@@ -96,7 +99,7 @@ fs.readFile('../file/data.txt', 'utf8', function (err, confile) {
 
 > 练习：appendFileSync和appendFile是将内容同步和异步的追加到文件的末尾，尝试将data.txt文件内容追加到info.txt末尾
 - 同步追加 appendFileSync
-```
+```js
 var fs = require('fs');
 
 var data = fs.readFileSync('./file/data.txt', {encoding: 'utf8', flag: 'r'});
@@ -107,7 +110,7 @@ fs.appendFileSync('./file/info.txt', data, {encoding: 'utf8', flag: 'a'});
 ```
 
 - 异步追加 appendFile
-```
+```js
 var fs = require('fs');
 
 fs.readFile('./file/data.txt', {encoding: 'utf8', flag: 'r'}, function (err, data) {
@@ -125,7 +128,7 @@ fs.readFile('./file/data.txt', {encoding: 'utf8', flag: 'r'}, function (err, dat
 
 
 - 关于读文件和写文件中的flag的说明:
-```
+```js
 flag	说明
 r	读取文件。如果文件不存在时抛出异常
 r+	读取并写入。如果文件不存在时抛出异常
@@ -151,7 +154,7 @@ ax+	作用与”a+”类似。但是以排他方式打开文件
 - 创建目录
     - 同步: fs.mkdirSync('a/b/c/d');
     - 异步: fs.mkdir('a/b/c/d');
-```
+```js
 var fs = require('fs');
 
 //同步创建文件夹, 要求父级目录必须存在否则创建失败
@@ -168,7 +171,7 @@ fs.mkdir('./file/fileNew/fileNewNew', function (err) {
 - 判断一个文件是否存在
     - 同步: existsSync
     - 同步: exists
-```
+```js
 var fs = require('fs');
 
 //同步判断某个目录或者文件是否存在
@@ -183,7 +186,7 @@ fs.exists('./file/fileNew', function(exist){
 
 - 读取目录下所有的文件
 fs.readdirSync();
-```
+```js
 var fs = require('fs');
 
 //异步读取目录下所有的文件=>只能读取一层
@@ -199,7 +202,7 @@ console.log(ary);
 
 - 查看文件目录信息
 fs.statSync('./e/'+item);
-```
+```js
 var fs = require('fs');
 
 //同步获取文件的信息
@@ -219,26 +222,7 @@ console.log(fileInfo.isDirectory());
 
 > 编写一个方法，将某个目录下的所有文件内容读取出来(只要文件)，集体追加到另一个文件的末尾
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
+```js
 function myReadFile(dirPath, filePath){
     var fs = require('fs');
     var path = require('path');

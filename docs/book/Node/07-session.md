@@ -1,3 +1,8 @@
+---
+title: Http模块
+date: 2018-05-29
+---
+
 ## 什么是session
 > session是另一种记录客户状态的机制，不同的是Cookie保存在客户端浏览器中，而session保存在服务器上
 
@@ -16,7 +21,7 @@
 - 3: 将session_id作为全局唯一标示符通过cookie发送给客户端
 - 4: 以后客户端再次访问服务器时会把session_id通过请求头中的cookie发送给服务器
 - 5: 服务器再通过session_id把此标识符在服务器端的数据取出
-```
+```js
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var app = express();
@@ -67,7 +72,7 @@ $ npm install express-session
 <!-- ![session中间件](img/session1.png) -->
 
 ## sesssion实现访问次数的纪录
-```
+```js
 var express = require('express');
 var app = express();
 var session = require('express-session');
@@ -98,7 +103,7 @@ app.listen(9999);
 
 ## session实现权限
 > 服务端
-```
+```js
 var express = require('express'); //注入express模块
 var session = require('express-session'); //session的相关操作
 var path = require('path'); //路径相关操作
@@ -161,7 +166,7 @@ app.listen(7777);
 ```
 > views模版
 - index.html页面
-```
+```html
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -176,7 +181,7 @@ app.listen(7777);
  </html>
 ```
 - login.html页面
-```
+```html
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -201,7 +206,7 @@ app.listen(7777);
  </html>
 ```
 - user.html页面
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -222,7 +227,7 @@ app.listen(7777);
 ```
 $ npm install connect-mongo
 ```
-```
+```js
 var MongoStore = require('connect-mongo')(session);
 //解析 cookie 请求头中的cookie转成对象 req.cookies
 app.use(cookieParser());

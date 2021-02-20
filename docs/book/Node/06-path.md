@@ -1,19 +1,21 @@
+---
+title: 路径模块
+date: 2018-05-29
+---
+
 # 路径处理path模块
 path是node中专门处理路径的一个核心模块
 
-
-- 将多个参数值字符串结合为一个路径字符串
-path.join
-```
+- 将多个参数值字符串结合为一个路径字符串 `path.join`
+```js
 var path = require('path');
 
 //将字符串拼接成路径的形式(字符串之间用/隔开)
 console.log(path.join('divr', 'filename'));
 ```
 
-- 获取一个路径中的文件名
-path.basename
-```
+- 获取一个路径中的文件名 `path.basename`
+```js
 var path = require('path');
 
 //将字符串拼接成路径的形式(字符串之间用/隔开)
@@ -24,9 +26,8 @@ console.log(path.basename(pathname));
 ```
 
 
-- 获取一个路径中的扩展名
-path.extname
-```
+- 获取一个路径中的扩展名 `path.extname`
+```js
 var path = require('path');
 
 //将字符串拼接成路径的形式(字符串之间用/隔开)
@@ -36,9 +37,8 @@ var pathname = path.join('divr', 'dir1', 'dir2', 'filename.txt');
 console.log(path.extname(pathname));
 ```
 
-- 操作系统提定的文件分隔符
-path.sep
-```
+- 操作系统提定的文件分隔符 `path.sep`
+```js
 var path = require('path');
 
 console.log(path.sep); //特定平台下的分割符(window和mac下不一样)
@@ -48,9 +48,8 @@ console.log(filepath.split(path.sep));  //将路径名进行分割
 ```
 
 
-- 属性值为系统指定的环境变量路径分隔符
-path.delimiter
-```
+- 属性值为系统指定的环境变量路径分隔符 `path.delimiter`
+```js
 var path = require('path');
 
 console.log(path.delimiter); //特定平台的路径分隔符
@@ -61,9 +60,8 @@ console.log(process.env.PATH);
 console.log(process.env.PATH.split(path.delimiter));//将环境变量的路径集合, 按照路径分隔符分割成若干个子路径
 ```
 
-- 将非标准的路径字符串转化为标准路径字符串
-path.normalize
-```
+- 将非标准的路径字符串转化为标准路径字符串 `path.normalize`
+```js
 var path = require('path');
 
 var filepath = '../../././././../dir1////dir/filename.txt';
@@ -80,7 +78,7 @@ console.log(path.normalize(filepath)); //将非标准的路径字符串转换成
 
 取得绝对路径
 - resolve
-```
+```js
 var path = require('path');
 
 var filename = '1. join.js';
