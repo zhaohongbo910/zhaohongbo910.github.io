@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DOM事件流模型 | 小布丁</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    <link rel="icon" href="/favicon.ico">
+    <script src="https://unpkg.com/md5/dist/md5.min.js"></script>
+    <meta name="description" content="秋天到了，夏天的不甘该通通放下了。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.53ce6188.css" as="style"><link rel="preload" href="/assets/js/app.1b4936f7.js" as="script"><link rel="preload" href="/assets/js/4.14a48c8e.js" as="script"><link rel="preload" href="/assets/js/1.990d72b4.js" as="script"><link rel="preload" href="/assets/js/40.4ec93f69.js" as="script"><link rel="prefetch" href="/assets/js/10.ac65b48a.js"><link rel="prefetch" href="/assets/js/11.73ad7835.js"><link rel="prefetch" href="/assets/js/12.f72e5586.js"><link rel="prefetch" href="/assets/js/13.1175c524.js"><link rel="prefetch" href="/assets/js/14.480ee36b.js"><link rel="prefetch" href="/assets/js/15.2b2ce034.js"><link rel="prefetch" href="/assets/js/16.578ade16.js"><link rel="prefetch" href="/assets/js/17.a2f5c305.js"><link rel="prefetch" href="/assets/js/18.4844f96c.js"><link rel="prefetch" href="/assets/js/19.5b099eda.js"><link rel="prefetch" href="/assets/js/20.e3852fe3.js"><link rel="prefetch" href="/assets/js/21.cc7322c1.js"><link rel="prefetch" href="/assets/js/22.6991d67f.js"><link rel="prefetch" href="/assets/js/23.193ce0b2.js"><link rel="prefetch" href="/assets/js/24.35c8607f.js"><link rel="prefetch" href="/assets/js/25.132ef241.js"><link rel="prefetch" href="/assets/js/26.2e1d88c6.js"><link rel="prefetch" href="/assets/js/27.8aa44e3b.js"><link rel="prefetch" href="/assets/js/28.a9cb8317.js"><link rel="prefetch" href="/assets/js/29.824dd2d4.js"><link rel="prefetch" href="/assets/js/30.3fba1a56.js"><link rel="prefetch" href="/assets/js/31.cc4ae0fd.js"><link rel="prefetch" href="/assets/js/32.583a6ef3.js"><link rel="prefetch" href="/assets/js/33.130dfc33.js"><link rel="prefetch" href="/assets/js/34.daf252e5.js"><link rel="prefetch" href="/assets/js/35.5ee9ebf3.js"><link rel="prefetch" href="/assets/js/36.ea104684.js"><link rel="prefetch" href="/assets/js/37.c49b032e.js"><link rel="prefetch" href="/assets/js/38.5ae6c3e5.js"><link rel="prefetch" href="/assets/js/39.e2e781e0.js"><link rel="prefetch" href="/assets/js/41.5ec9baf8.js"><link rel="prefetch" href="/assets/js/42.2a515523.js"><link rel="prefetch" href="/assets/js/43.52e4f0a3.js"><link rel="prefetch" href="/assets/js/44.bc3b1401.js"><link rel="prefetch" href="/assets/js/45.b09507a2.js"><link rel="prefetch" href="/assets/js/46.fe428ec4.js"><link rel="prefetch" href="/assets/js/47.026355cb.js"><link rel="prefetch" href="/assets/js/48.b5afdce3.js"><link rel="prefetch" href="/assets/js/49.5e33594d.js"><link rel="prefetch" href="/assets/js/5.f2fbf23e.js"><link rel="prefetch" href="/assets/js/50.fbee7348.js"><link rel="prefetch" href="/assets/js/51.7c56ae89.js"><link rel="prefetch" href="/assets/js/52.8ff780d1.js"><link rel="prefetch" href="/assets/js/53.02af4c30.js"><link rel="prefetch" href="/assets/js/54.21603203.js"><link rel="prefetch" href="/assets/js/55.316afec8.js"><link rel="prefetch" href="/assets/js/56.9b022a29.js"><link rel="prefetch" href="/assets/js/57.91aa2b3f.js"><link rel="prefetch" href="/assets/js/58.df413837.js"><link rel="prefetch" href="/assets/js/59.d842e5dc.js"><link rel="prefetch" href="/assets/js/6.a8077ba3.js"><link rel="prefetch" href="/assets/js/60.08dc61ca.js"><link rel="prefetch" href="/assets/js/61.74164eb9.js"><link rel="prefetch" href="/assets/js/62.ad8a8ac0.js"><link rel="prefetch" href="/assets/js/63.da5959e2.js"><link rel="prefetch" href="/assets/js/64.2b6c93fa.js"><link rel="prefetch" href="/assets/js/65.d17ce2c5.js"><link rel="prefetch" href="/assets/js/66.a8bb72d5.js"><link rel="prefetch" href="/assets/js/67.4735b24e.js"><link rel="prefetch" href="/assets/js/68.ccd56f6d.js"><link rel="prefetch" href="/assets/js/69.4193dfcf.js"><link rel="prefetch" href="/assets/js/7.7649c60b.js"><link rel="prefetch" href="/assets/js/70.ec7b6aa4.js"><link rel="prefetch" href="/assets/js/71.2af6f7be.js"><link rel="prefetch" href="/assets/js/72.b678f9b3.js"><link rel="prefetch" href="/assets/js/73.31a2a3bc.js"><link rel="prefetch" href="/assets/js/74.ba227e91.js"><link rel="prefetch" href="/assets/js/75.c77e66bf.js"><link rel="prefetch" href="/assets/js/76.3a558479.js"><link rel="prefetch" href="/assets/js/77.c37dd51e.js"><link rel="prefetch" href="/assets/js/78.57c3dc17.js"><link rel="prefetch" href="/assets/js/79.07f412d2.js"><link rel="prefetch" href="/assets/js/8.b97915e7.js"><link rel="prefetch" href="/assets/js/80.30af8392.js"><link rel="prefetch" href="/assets/js/81.c6bcb158.js"><link rel="prefetch" href="/assets/js/82.a0a625ef.js"><link rel="prefetch" href="/assets/js/83.5961b790.js"><link rel="prefetch" href="/assets/js/84.b294ccdf.js"><link rel="prefetch" href="/assets/js/9.d4c71393.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.dc2cb5d0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.53ce6188.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>小布丁</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>小布丁</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.jpg" alt="小布丁" class="logo"> <span class="site-name">小布丁</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具配置/" class="nav-link"><i class="iconfont undefined"></i>
+  工具配置
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node/" class="nav-link"><i class="iconfont undefined"></i>
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Shell/" class="nav-link"><i class="iconfont undefined"></i>
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TCP—IP/" class="nav-link"><i class="iconfont undefined"></i>
+  TCP—IP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CDN/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  Timeline
+</a></div><div class="nav-item"><a href="https://github.com/zhaohongbo910" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/head.jpg" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    小布丁
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>52</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>25</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具配置/" class="nav-link"><i class="iconfont undefined"></i>
+  工具配置
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Node/" class="nav-link"><i class="iconfont undefined"></i>
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Shell/" class="nav-link"><i class="iconfont undefined"></i>
+  Shell
+</a></li><li class="dropdown-item"><!----> <a href="/categories/TCP—IP/" class="nav-link"><i class="iconfont undefined"></i>
+  TCP—IP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CDN/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  Timeline
+</a></div><div class="nav-item"><a href="https://github.com/zhaohongbo910" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>DOM事件流模型</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>小布丁</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2022
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>DOM事件流模型</h1> <hr> <div data-v-aa64b9d0><i class="iconfont reco-account" data-v-aa64b9d0><span data-v-aa64b9d0>小布丁</span></i> <i class="iconfont reco-date" data-v-aa64b9d0><span data-v-aa64b9d0>2017-04-10</span></i> <!----> <i class="iconfont reco-tag tags" data-v-aa64b9d0><span class="tag-item" data-v-aa64b9d0>JavaScript</span><span class="tag-item" data-v-aa64b9d0>面试</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="事件绑定和普通事件-有什么区别"><a href="#事件绑定和普通事件-有什么区别" class="header-anchor">#</a> 事件绑定和普通事件 有什么区别</h2> <ul><li>事件：事件是由浏览器动作（如浏览器载入文档onload）和用户动作（如点击onclick）触发所产生得人机交互瞬间。</li> <li>普通事件：<strong>给html元素添加一个特定的属性（比如：onclick）</strong></li> <li>事件绑定：js代码中通过标记(id tag class)获取元素，给元素添加特定的方法(比如onclick)</li> <li>事件流：描述事件从页面到接受处理的流程</li></ul> <p><strong>DOM事件流模型</strong> <strong>事件冒泡</strong>
+由目标元素上所产生的动作为事件触发源，然后事件层层向其父代递交，直至到document节点，期间可能产生连锁的事件触发，如上述代码结果button-&gt;div-&gt;body-&gt;html-&gt;document。【微软提出】</p> <p><strong>事件捕捉</strong>
+与上述完全相反document-&gt;html-&gt;body-&gt;div-&gt;button，下面直接代码演示。【网景提出】</p> <div class="custom-block tip"><p>1、所有现代浏览器都支持事件冒泡，但在具体实现中略有差别：<br>
++ IE5.5及更早版本中事件冒泡会跳过元素(从body直接跳到document)。<br>
++ IE9、Firefox、Chrome、和Safari则将事件一直冒泡到window对象。<br>
+2、IE9、Firefox、Chrome、Opera、和Safari都支持事件捕获。尽管DOM标准要求事件应该从document对象开始传播，但这些浏览器都是从window对象开始捕获事件的。<br>
+3、由于老版本浏览器不支持，很少有人使用事件捕获。建议使用事件冒泡。<br></p></div> <p><strong>事件流的三个阶段</strong></p> <ul><li><p>事件捕捉阶段：由外部动作触发到传递到目标元素最近的父节点的过程，途中不会接受事件。</p></li> <li><p>处于目标元素阶段：从事件传入到目标元素之初，到未接收事件之末的过程。</p></li> <li><p>冒泡阶段：从事件接受处理触发之初，到事件递交document节点之末的过程，途中接受事件。</p></li></ul> <p>事件代理【利用事件冒泡:如果一个父节点内含有多个子节点，并且每个子节点都存在同一事件类型（如onclick）。我们可以为其父代设置一个事件处理器（onclick），来避免为其每个子代设置一个事件处理器，降低内存，提高性能。</p> <p><strong>传统事件绑定和符合W3C标准的事件绑定有什么区别？</strong> <strong>一级事件</strong>
+div1.οnclick=function(){};
+1、如果说给同一个元素绑定了两次或者多次相同类型的事件，那么后面的绑定会覆盖前面的绑定
+2、不支持DOM事件流 事件捕获阶段目标元素阶段=&gt;事件冒泡阶段
+<strong>二级事件</strong>
+addEventListener
+1、如果说给同一个元素绑定了两次或者多次相同类型的事件，所有的绑定将会依次触发
+2、支持DOM事件流的
+3、进行事件绑定传参不需要on前端
+<strong>true - 事件句柄在捕获阶段执行 , false- false- 默认。事件句柄在冒泡阶段执行</strong> <strong>event.stopPropagation()</strong>
+addEventListener(“click”,function(){},false);//此时的事件就是在事件冒泡阶段执行</p> <p><strong>ie9开始，ie11 edge：addEventListener</strong></p> <ul><li>ie9以前：attachEvent/detachEvent
+<ul><li>1、进行事件类型传参需要带上on前缀</li> <li>2、这种方式只支持事件冒泡，不支持事件捕获</li> <li>事件绑定是指把事件注册到具体的元素之上，普通事件指的是可以用来注册的事件</li></ul></li></ul> <h2 id="ie和dom事件流的区别"><a href="#ie和dom事件流的区别" class="header-anchor">#</a> IE和DOM事件流的区别</h2> <ul><li>IE9以前：attachEvent(“onclick”)、detachEvent(“onclick”)</li> <li>IE9开始跟DOM事件流是一样的，都是addEventListener</li></ul> <p><strong>比较attachEvent和addEventListener：</strong></p> <ul><li>1、<strong>attachEvent只支持事件冒泡</strong>，<strong>addEventListener既支持事件冒泡，也支持事件捕获</strong></li> <li>2、参数：attachEvent事件类型需要on前缀 addEventListener事件类型不需要on前缀</li> <li>3、如果使用attachEvent对一个元素的目标阶段绑定了多次事件，那么会按照绑定顺序的相反顺序进行触发，如果使用addEventListener对一个元素的目标阶段绑定了多次事件，那么会按照绑定顺序进行触发</li></ul> <h2 id="ie和标准下有哪些兼容性的写法"><a href="#ie和标准下有哪些兼容性的写法" class="header-anchor">#</a> IE和标准下有哪些兼容性的写法</h2> <ul><li>a、获取事件对象：var ev = ev || window.event 或者  var ev=ev?ev:window.evnet;</li> <li>srcElement：IE9之前的浏览器用来获取事件目标元素</li> <li>target：IE9+、ff、chrome用来获取事件的目标元素</li> <li>b、获取事件目标元素：var target = ev.srcElement||ev.target</li></ul> <h2 id="如何阻止事件冒泡和默认事件"><a href="#如何阻止事件冒泡和默认事件" class="header-anchor">#</a> 如何阻止事件冒泡和默认事件</h2> <p><strong>默认行为：html标签所具有的默认行为，比如：</strong></p> <ul><li>a、点击a标签，就会默认跳转到指定的页面</li> <li>b、点击submit按钮，就会自动提交表单
+适用场景：</li> <li>1、异步操作</li> <li>2、提交表单之前对表单进行一些基本的验证，比如邮箱是否合法，用户名是不是满足指定的格式,为了不让a点击之后跳转，我们就要给他的点击事件进行阻止</li> <li>3、文本框获得焦点</li></ul> <p><strong>阻止事件冒泡：</strong></p> <ul><li>IE9 + FF:<code>Chrome：e. stopPropagation()</code>;</li> <li>ie9之前:<code>window.event.cancelBubble=true</code> ;</li></ul> <p><strong>阻止默认行为：</strong></p> <ul><li>IE9之前:<code>window.event.returnValue=false</code>;</li> <li>IE9+ FF:<code>Chrome： e.preventDefault()</code>;</li></ul></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/21/2021, 4:10:00 AM</span></div></footer> <!----> <!----> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-40a3448a><li class="level-2" data-v-40a3448a><a href="/views/2017/04/10/dom%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A8%A1%E5%9E%8B/#事件绑定和普通事件-有什么区别" class="sidebar-link" data-v-40a3448a>事件绑定和普通事件 有什么区别</a></li><li class="level-2" data-v-40a3448a><a href="/views/2017/04/10/dom%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A8%A1%E5%9E%8B/#ie和dom事件流的区别" class="sidebar-link" data-v-40a3448a>IE和DOM事件流的区别</a></li><li class="level-2" data-v-40a3448a><a href="/views/2017/04/10/dom%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A8%A1%E5%9E%8B/#ie和标准下有哪些兼容性的写法" class="sidebar-link" data-v-40a3448a>IE和标准下有哪些兼容性的写法</a></li><li class="level-2" data-v-40a3448a><a href="/views/2017/04/10/dom%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A8%A1%E5%9E%8B/#如何阻止事件冒泡和默认事件" class="sidebar-link" data-v-40a3448a>如何阻止事件冒泡和默认事件</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.1b4936f7.js" defer></script><script src="/assets/js/4.14a48c8e.js" defer></script><script src="/assets/js/1.990d72b4.js" defer></script><script src="/assets/js/40.4ec93f69.js" defer></script>
+  </body>
+</html>
